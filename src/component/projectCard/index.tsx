@@ -10,6 +10,7 @@ import {
 import { motion, scale, Variants } from "framer-motion";
 import { html } from "motion/react-client";
 import { useState } from "react";
+import { useScrolls } from "../contextScrollProvider";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -30,6 +31,7 @@ export default function ProjectCard({
   thirdDialog,
   onClick,
 }: ProjectCardProps) {
+  const { setYPos } = useScrolls();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const textVariants: Variants = {
@@ -54,7 +56,6 @@ export default function ProjectCard({
       transition: {
         duration: 0.5,
       },
-      
     },
     tapLoad: {
       scale: 1,
@@ -84,6 +85,7 @@ export default function ProjectCard({
           if (onClick) {
             onClick();
           }
+          setYPos(-100);
           setIsOpen(true);
         }}
         className="col-span-4 row-span-1 md:row-span-2 rounded-2xl overflow-hidden xl:col-span-5 xl:row-span-4"

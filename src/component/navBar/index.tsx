@@ -2,11 +2,14 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { div } from "motion/react-client";
 import { useEffect, useState } from "react";
+import { useScrolls } from "../contextScrollProvider";
 
 export default function Nav() {
   const { scrollY } = useScroll();
-  const [scrollDirection, setScrollDirection] = useState(1);
-  const [yPos,setYPos] = useState(0);
+  // const [scrollDirection, setScrollDirection] = useState(1);
+  // const [yPos,setYPos] = useState(0);
+  const { yPos, setYPos, scrollDirection, setScrollDirection, scrollToTop } =
+    useScrolls();
   useMotionValueEvent(scrollY, "change", (current) => {
     const diff = current - scrollY.getPrevious()!;
     setScrollDirection(diff > 0 ? 0 : 1);
@@ -15,18 +18,13 @@ export default function Nav() {
   return (
     <motion.div
       className="fixed top-0 w-screen z-50 bg-[#212020]"
-      animate={{ opacity: scrollDirection ,y: yPos}}
+      animate={{ opacity: scrollDirection, y: yPos }}
       transition={{ duration: 0.3 }}
     >
       <div className="border-b-2 border-gray-700 flex justify-between items-center text-white px-10 h-16">
         <motion.button
           whileHover={{ scale: 1.1, cursor: "pointer", rotate: -2 }}
-          onClick={()=>{
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            })
-          }}
+          onClick={scrollToTop}
         >
           Arvin Hasim
         </motion.button>

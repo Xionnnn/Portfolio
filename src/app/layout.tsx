@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import Nav from "../component/navBar/index";
 import BreakpointIndicator from "../component/breakPoint";
+import { ScrollProvider } from "@/component/contextScrollProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Nav />
-        {children}
+        <ScrollProvider>
+          <Nav />
+          {children}
+        </ScrollProvider>
         {/* {process.env.NODE_ENV === "development" && <BreakpointIndicator />} */}
       </body>
     </html>
