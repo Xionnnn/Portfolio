@@ -131,7 +131,7 @@ export default function Main() {
       {/* Feature Highlight */}
       <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 xl:grid-cols-12 xl:grid-rows-12 px-10 xl:px-50 py-20 md:gap-y-10 xl:gap-y-15 gap-x-12">
         <ProjectCard
-          imageSrc="./Greatnusa.png"
+          imageSrc="./greatnusa.png"
           title="GreatNusa | Main Website (Greatnusa.com)"
           description="Digital platform for lifelong learner that provides a wide variety of selected topics through massive online open courses for young professionals in Indonesia"
           firstDialog="GreatNusa is a digital platform for lifelong learner that provides a wide variety of selected topics through massive online open courses for young professionals in Indonesia. In this wonderful opportunity, i learn not only to code, but to communicate, and to collaborate with others to make and maintain a platform that helps thousands of people to learn and gain new knowledge."
