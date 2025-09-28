@@ -7,7 +7,7 @@ export function Hero({ HeroText }: { HeroText: string }) {
   return (
     <div className="flex flex-col items-center justify-center h-10/12">
       <div
-        className="flex justify-center items-center text-lg md:text-2xl xl:text-3xl text-center"
+        className="flex justify-center items-center text-md md:text-2xl xl:text-3xl text-center"
         style={{ whiteSpace: "pre" }}
       >
         {HeroText.split("").map((char, index) => (
@@ -37,7 +37,7 @@ export function Hero({ HeroText }: { HeroText: string }) {
           ...
         </motion.span>
       </div>
-      <div className="pt-8 text-xl flex justify-center">
+      <div className="pt-8 text-md flex justify-center md:text-xl">
         <motion.button
           className="rounded-md bg-gray-400 px-2 text-black"
           initial={{ scale: 0 }}

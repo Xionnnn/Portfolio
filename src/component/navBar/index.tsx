@@ -21,7 +21,7 @@ export default function Nav() {
       animate={{ opacity: scrollDirection, y: yPos }}
       transition={{ duration: 0.3 }}
     >
-      <div className="border-b-2 border-gray-700 flex justify-between items-center text-white px-10 h-16">
+      <div className="border-b-2 border-gray-700 flex justify-between items-center text-white px-6 md:px-10 h-14 md:h-16 ">
         <motion.button
           whileHover={{ scale: 1.1, cursor: "pointer", rotate: -2 }}
           onClick={scrollToTop}

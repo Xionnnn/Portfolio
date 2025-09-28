@@ -90,7 +90,7 @@ export default function Main() {
           />
         </motion.div>
         <motion.div
-          className="col-span-4 row-span-1 md:row-span-8 pt-4"
+          className="col-span-4 row-span-1 md:row-span-8 pt-2 md:pt-4"
           variants={abtMe}
           initial="offScreen"
           whileInView="onScreen"

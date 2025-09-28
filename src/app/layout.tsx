@@ -34,7 +34,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </ScrollProvider>
-        {/* {process.env.NODE_ENV === "development" && <BreakpointIndicator />} */}
+        {process.env.NODE_ENV === "development" && <BreakpointIndicator />}
       </body>
     </html>
   );
