@@ -46,6 +46,11 @@ export function Hero({ HeroText }: { HeroText: string }) {
           whileTap={{ scale: 1.1 }}
           transition={{ delay, duration: 0.3 }}
           onAnimationComplete={() => setDelay(0)}
+          onClick={()=>{
+            window.open(
+              "https://drive.google.com/file/d/13MG6Ds-SSQS6f_4huAiMIlT9roTNJHdA/view?usp=sharing","__blank"
+            );
+          }}
         >
           Download CV
         </motion.button>
