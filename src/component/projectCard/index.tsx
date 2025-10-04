@@ -103,7 +103,7 @@ export default function ProjectCard({
         viewport={{ once: true }}
         className="col-span-4 row-span-1 md:row-span-2 xl:col-span-7 xl:row-span-4 mt-4 md:self-center"
       >
-        <div className="text:sm xl:text-lg">{title}</div>
+        <div className="text-sm xl:text-lg">{title}</div>
         <div className="text-md xl:text-2xl mt-2">{description}</div>
       </motion.div>
       <Dialog

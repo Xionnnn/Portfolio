@@ -22,7 +22,7 @@ export default function Main() {
   };
 
   const abtMeExp: Variants = {
-    offScreen: {
+    offScreen: {    
       x: 100,
       opacity: 0,
     },
@@ -55,10 +55,10 @@ export default function Main() {
 
   return (
     <div>
-      <div className="h-screen w-screen flex flex-col justify-center items-center border-b-1 border-gray-700">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center border-b border-gray-700 px-4">
         <Hero HeroText="Hi there, You have landed in Arvin's portfolio" />
         <motion.div
-          className="absolute bottom-5"
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 text-sm md:text-base px-2"
           animate={{ y: [0, -8] }}
           transition={{
             type: "spring",
@@ -74,7 +74,7 @@ export default function Main() {
         </motion.div>
       </div>
       {/* About me, Experience */}
-      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 px-10 xl:px-50 py-20 gap-x-12 border-b-1 border-gray-700">
+      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 px-4 md:px-10 xl:px-16 py-12 md:py-20 gap-x-6 md:gap-x-12 gap-y-8 border-b border-gray-700">
         {/* About me */}
         <motion.div
           className="col-span-4 row-span-2 md:col-span-2 md:row-span-8 overflow-hidden self-center"
@@ -129,7 +129,7 @@ export default function Main() {
         </motion.div>
       </div>
       {/* Feature Highlight */}
-      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 xl:grid-cols-12 xl:grid-rows-12 px-10 xl:px-50 py-20 md:gap-y-10 xl:gap-y-15 gap-x-12">
+      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 xl:grid-cols-12 xl:grid-rows-12 px-4 md:px-10 xl:px-16 py-12 md:py-20 md:gap-y-10 xl:gap-y-16 gap-x-6 md:gap-x-12 gap-y-8">
         <ProjectCard
           imageSrc="./greatnusa.png"
           title="GreatNusa | Main Website (Greatnusa.com)"
