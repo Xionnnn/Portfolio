@@ -1,8 +1,7 @@
 "use client";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import ProjectCard from "../component/projectCard";
 import { Hero } from "@/component/Hero";
-import { useState } from "react";
 
 export default function Main() {
   const abtMeImg: Variants = {
@@ -74,19 +73,19 @@ export default function Main() {
         </motion.div>
       </div>
       {/* About me, Experience */}
-      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 px-4 md:px-10 xl:px-16 py-12 md:py-20 gap-x-6 md:gap-x-12 gap-y-8 border-b border-gray-700">
+      <div className="grid grid-cols-4 grid-rows-4 md:grid-cols-8 md:grid-rows-8 px-4 md:px-10 xl:px-16 py-12 md:py-20 gap-x-6 md:gap-x-12  md:gap-y-8 border-b border-gray-700">
         {/* About me */}
         <motion.div
-          className="col-span-4 row-span-2 md:col-span-2 md:row-span-8 overflow-hidden self-center"
+          className="col-span-4 row-span-2 md:col-span-2 md:row-span-8 overflow-hidden self-center place-self-center"
           variants={abtMeImg}
           initial="offScreen"
           whileInView="onScreen"
           viewport={{ once: true }}
         >
           <img
-            src="./SelfGlaze.jpg"
+            src="../../public/SelfGlaze.jpg"
             alt="Photo"
-            className="object-cover max-w-full max-h-full"
+            className="object-cover max-h-72 md:max-w-full md:max-h-full"
           />
         </motion.div>
         <motion.div
