@@ -83,7 +83,7 @@ export default function Main() {
           viewport={{ once: true }}
         >
           <img
-            src="../../public/SelfGlaze.jpg"
+            src="./SelfGlaze.jpg"
             alt="Photo"
             className="object-cover max-h-72 md:max-w-full md:max-h-full"
           />
