@@ -126,7 +126,7 @@ export default function ProjectCard({
                 alt={title}
                 className="object-cover w-full h-full rounded-xl"
               />
-              <div className="p-10">
+              <div className="p-10 text-sm md:text-md lg:text-xl">
                 <div className="mb-2">{firstDialog}</div>
                 {secondDialog && <div className="mb-2">{secondDialog}</div>}
                 {thirdDialog && <div>{thirdDialog}</div>}
