@@ -88,12 +88,12 @@ export default function ProjectCard({
           setYPos(-100);
           setIsOpen(true);
         }}
-        className="col-span-4 row-span-1 md:row-span-2 rounded-2xl overflow-hidden xl:col-span-5 xl:row-span-4"
+        className="col-span-4 row-span-1 aspect-video w-full max-w-[700px] overflow-hidden rounded-2xl md:row-span-2 xl:col-span-5 xl:row-span-4"
       >
         <img
           src={imageSrc}
           alt={title}
-          className="object-cover w-full h-full"
+          className="size-full object-cover"
         />
       </motion.button>
       <motion.div

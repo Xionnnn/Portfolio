@@ -48,7 +48,7 @@ export function Hero({HeroText}: { HeroText: string }) {
                     onAnimationComplete={() => setDelay(0)}
                     onClick={() => {
                         window.open(
-                            "https://drive.google.com/file/d/1SJ94IRxmTV2jVkd5pT5_MbkWSgQD2LHg/view?usp=sharing", "__blank"
+                            "https://drive.google.com/file/d/1uDjillzCGG2wmLlBYlzOYnoi-1b7A_xQ/view?usp=sharing", "__blank"
                         );
                     }}
                 >
